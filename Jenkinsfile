@@ -4,7 +4,7 @@ pipeline {
      stage('build') {
         steps {
             echo 'building'
-            ssh './gradlew build'
+            ssh './gradlew build --no-daemon'
             archiveArtifacts artifacts: 'dist/trainSCedule.zip'
         }
      }
